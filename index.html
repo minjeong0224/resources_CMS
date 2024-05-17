@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+
+<link rel="stylesheet" href="./resources/css/style.css">
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="./resources/js/main.js"></script>
+
+<body>
+<!-- 관리자 페이지 -->
+<div id="page_2">
+<!-- 네비 -->
+	<div id="nav_section">
+		<nav id="top_nav"> 
+			<div class="left">
+				<div class="logo">CMS</div>
+				<div class="tab">
+					<img src="./resources/image/tab_icon.png" alt="검색">
+				</div>
+			</div>
+			<div class="right">
+				<div class="login_name">로그인 아이디</div>
+
+				<div class="util">
+					<img src="./resources/image/login_icon.png" alt="login"></li>
+					<span></span>
+				</div>
+				<div id="popup_logout">
+					<ul>
+						<li>2024.05.01 14:23:45</li>
+						<li></li>
+						<li class="logout">Logout</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="side_nav">
+			<ul>
+				<li>Dashboard</li>
+				<li>관리자 관리</li>
+				<li>기기 관리</li>
+				<li>
+					<div class="nav_title">콘텐츠 관리
+						<div class="arrow"></div>
+					</div>
+					<ul>
+						<li>XR 콘텐츠</li>
+						<li>VR 콘텐츠</li>
+					</ul>
+				</li>   
+				<li>
+					<div class="nav_title">스테이션츠 관리
+						<div class="arrow"></div>
+					</div>
+					<ul>
+						<li>XR 스테이션</li>
+						<li>VR 스테이션</li>
+					</ul>
+				</li>
+				<li>
+					<div class="nav_title">배포 관리
+						<div class="arrow"></div>
+					</div>
+					<ul>
+						<li>XR 배포</li>
+						<li>VR 배포</li>
+					</ul>
+				</li>
+				<li>통계</li>
+			</ul>
+		</div>
+		<div id="side_nav_mobile">
+			<ul>
+				<li>Dashboard</li>
+				<li>관리자 관리</li>
+				<li>기기 관리</li>
+				<li>콘텐츠 관리
+					<div class="arrow"></div>
+					<ul>
+						<li>XR 콘텐츠</li>
+						<li>VR 콘텐츠</li>
+					</ul>
+				</li>   
+				<li>스테이션츠 관리
+					<div class="arrow"></div>
+					<ul>
+						<li>XR 스테이션</li>
+						<li>VR 스테이션</li>
+					</ul>
+				</li>
+				<li>배포 관리
+					<div class="arrow"></div>
+					<ul>
+						<li>XR 배포</li>
+						<li>VR 배포</li>
+					</ul>
+				</li>
+				<li>통계</li>
+			</ul>
+		</div>
+		<div class="side_nav_bg"></div>
+	</div>
+
+<!-- 테이블 -->
+	<section id="table_section">
+		
+		<div class="top">
+
+			<div class="title">관리자</div>
+			<form>
+				<select name="chart" id="select_search_condition">
+					<option value="0">상태</option>
+					<option value="1">번호</option>
+					<option value="2">아이디</option>
+				</select>
+				<select name="chart" id="select_search_head">
+					<option value="0">검색항목</option>
+					<option value="1">등록자</option>
+					<option value="2">등록일</option>
+				</select>
+				<div id="search_area">
+					<input type="text" class="search" name="search">
+					<input type="button" id="button_serch" name="button_serch" value="조회">
+					<input type="button" id="button_admin" name="button_admin" value="등록">
+				</div>
+			</form>
+		</div>
+		<div class="table-wrapper">
+			<div class="tbl">
+				<table class="table table--min" >
+					<thead cellspacing='0'>
+						<tr>
+							<th class="num">번호</th>
+							<th class="id">아이디</th>
+							<th class="power">권한</th>
+							<th class="name">이름</th>
+							<th class="email">이메일</th>
+							<th class="condition">상태</th>
+							<th class="register">등록자</th>
+							<th class="register_date">등록일</th>
+						</tr>
+					</thead>
+					
+					<tbody cellspacing='0'>
+						<tr>
+							<td class="num">1</td>
+							<td class="button_id">xxxxxxxxxxx</td>
+							<td>슈퍼 관리자</td>
+							<td>kkkkkk@naver.com</td>
+							<td class="email">2575</td>
+							<td>정상</td>
+							<td>yyyyyyyy</td>
+							<td class="register_date">2024.05.01 11:44:55</td>
+						</tr>
+						
+						<tr>
+							<td class="num">2</td>
+							<td class="button_id">xxxxxxxxxxx</td>
+							<td>슈퍼 관리자</td>
+							<td>kkkkkk@naver.com</td>
+							<td class="email">2575</td>
+							<td>정상</td>
+							<td>yyyyyyyy</td>
+							<td class="register_date">2024.05.01 11:44:55</td>
+						</tr>
+						
+						<tr>
+							<td class="num">3</td>
+							<td class="button_id">xxxxxxxxxxx</td>
+							<td>슈퍼 관리자</td>
+							<td>kkkkkk@naver.com</td>
+							<td class="email">2575</td>
+							<td>정상</td>
+							<td>yyyyyyyy</td>
+							<td class="register_date">2024.05.01 11:44:55</td>
+						</tr>	
+						
+						<tr>
+							<td class="num">4</td>
+							<td class="button_id">xxxxxxxxxxx</td>
+							<td>슈퍼 관리자</td>
+							<td>kkkkkk@naver.com</td>
+							<td class="email">2575</td>
+							<td>정상</td>
+							<td>yyyyyyyy</td>
+							<td class="register_date">2024.05.01 11:44:55</td>
+						</tr>
+						
+						<tr>
+							<td class="num">5</td>
+							<td class="button_id">xxxxxxxxxxx</td>
+							<td>슈퍼 관리자</td>
+							<td>kkkkkk@naver.com</td>
+							<td class="email">2575</td>
+							<td>정상</td>
+							<td>yyyyyyyy</td>
+							<td class="register_date">2024.05.01 11:44:55</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="pagination">
+			<ul>
+				<li class="prev">&#60;</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li class="next">&#62;</li>
+			</ul>
+		</div>
+	</section>
+</div>
+	
+<!-- 관리자 수정 팝업 -->
+	<div class="popup_bg"></div>
+<div id="popup_reform">
+        <div class="pop-container">
+			<div class="top">
+				<span>관리자 수정</span>
+				<input type="button" class="popup_reform_close" >
+			</div>
+			<form>
+				<input type="text" placeholder="아이디" class="popup_reform_id">
+				<div class="popup_reform_pw">
+					<input type="password" placeholder="비밀번호">
+					<input type="password" placeholder="비밀번호 확인">
+				</div>
+				
+				<div class="popup_reform_adress">
+					<input type="text" placeholder="이름">
+					<input type="text" placeholder="이메일">
+				</div>
+				<div class="popup_reform_select">
+					<select name="chart" id="popup_reform_admin">
+						<option value="0">권한</option>
+						<option value="1">번호</option>
+						<option value="2">아이디</option>
+					</select>
+					
+					<select name="chart" id="popup_reform_condition">
+						<option value="0">상태</option>
+						<option value="1">번호</option>
+						<option value="2">아이디</option>
+					</select>
+				</div>
+				<input type="button" value="수정" class="popup_reform_button_re">
+			</form>
+        </div>
+    </div>.
+<!-- 관리자 등록 팝업 -->
+<div id="popup_register">
+	<div class="pop-container">
+		<div class="top">
+			<span>관리자 등록</span>
+			<input type="button" class="popup_register_close" >
+		</div>
+		<form>
+			<input type="text" placeholder="아이디" class="popup_register_id">
+			<div class="popup_register_pw">
+				<input type="password" placeholder="비밀번호">
+				<input type="password" placeholder="비밀번호 확인">
+			</div>
+
+			<div class="popup_register_adress">
+				<input type="text" placeholder="이름">
+				<input type="text" placeholder="이메일">
+			</div>
+			<div class="popup_register_select">
+				<select name="chart" id="popup_register_admin">
+					<option value="0">권한</option>
+					<option value="1">번호</option>
+					<option value="2">아이디</option>
+				</select>
+
+				<select name="chart" id="popup_register_condition">
+					<option value="0">상태</option>
+					<option value="1">번호</option>
+					<option value="2">아이디</option>
+				</select>
+			</div>
+			<input type="button" value="수정" class="popup_register_button_re">
+		</form>
+	</div>
+    </div>
+<!-- alert 팝업 -->
+
+		<div id="alert_popup_dim"> </div>
+			<div class="popup">
+				<div id="alert_popup_error">
+					<div class="pop-container">
+						<div class="img">
+							<img src="./resources/image/그림5.png" alt="그림">
+						</div>
+					<div id="pop-con">
+							아이디를 입력하세요
+					</div>
+						<div id="alert_popup_error_btn">
+							확인
+						</div>
+				</div>
+			</div>
+
+			<div id="alert_popup_info">
+				<div class="pop-container">
+					<div class="img">
+						<img src="./resources/image/그림4.png " alt="그림">
+					</div>
+					<div id="pop-con">
+							관리자 등록을 하시겠습니까?
+					</div>
+
+					<div class="btn">
+						<ul>
+							<li id="alert_popup_info_cancle_btn">취소</li>
+							<li id="alert_popup_accept_btn">확인</li>
+						</ul> 
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="alert_popup_info_select">
+				<div class="pop-container">
+					<div class="img">
+						<img src="./resources/image/그림4.png " alt="그림">
+					</div>
+					<div id="pop-con">
+						정상 삭제 되었습니다.
+					</div>
+						<div id="alert_popup_info_select_btn">
+							확인
+						</div>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>
